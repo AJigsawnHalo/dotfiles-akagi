@@ -1,7 +1,8 @@
 ##### User Aliases Akagi ver. 1.3 #####
 
 # This is a set of bash aliases adapted for server akagi, my home media
-# server
+# server. These aliases are created to ease the management and maintenance
+# of akagi server.
 
 ### general aliases
 alias spdtst='speedtest-cli --server 7167 --share'
