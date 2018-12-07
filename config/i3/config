@@ -196,5 +196,5 @@ bindsym $mod+Shift+End mode "$mode_system"
 
 
 # User Applications
-bindsym $mod+F3 exec caja
+bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F2 exec firefox
