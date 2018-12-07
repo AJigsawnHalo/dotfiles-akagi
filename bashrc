@@ -115,3 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+VISUAL=nano ; export VISUAL
+EDITOR=nano ; export EDITOR
