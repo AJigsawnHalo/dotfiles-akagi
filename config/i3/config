@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -196,5 +196,8 @@ bindsym $mod+Shift+End mode "$mode_system"
 
 
 # User Applications
+exec --no-startup-id nitrogen --restore
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F2 exec firefox
+bindsym $mod+F5 exec "wine /home/elskiee/.wine/drive_c/users/elskiee/'Application Data'/Taiga/Taiga.exe"
+bindsym $mod+F6 exec transmission-qt
