@@ -97,4 +97,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source .zsh_aliases
-#DEFAULT_USER="elskiee"
+DEFAULT_USER="elskiee"
