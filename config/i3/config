@@ -196,7 +196,7 @@ bindsym $mod+Shift+End mode "$mode_system"
 
 
 # User Applications
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F2 exec firefox
 bindsym $mod+F5 exec "wine /home/elskiee/.wine/drive_c/users/elskiee/'Application Data'/Taiga/Taiga.exe"
