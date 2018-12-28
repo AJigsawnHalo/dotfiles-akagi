@@ -43,6 +43,8 @@ alias distup='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
 alias acln='sudo apt autoclean'
 ### Changelog
 # ver. 1.4:  Added Transmission-cli aliases
+#            "apt aliases"
+#              added acln alias
 #
 # ver. 1.3:  "general aliases"
 #              added cddot to cd aliases
