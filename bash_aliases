@@ -1,6 +1,6 @@
-##### User Aliases Akagi ver. 1.3 #####
+##### User Aliases Akagi ver. 1.4 #####
 
-# This is a set of bash aliases adapted for server akagi, my home media
+# This is a set of aliases adapted for server akagi, my home media
 # server. These aliases are created to ease the management and maintenance
 # of akagi server.
 
@@ -9,7 +9,7 @@ alias spdtst='speedtest-cli --server 7167 --share'
 alias df='pydf'
 alias sx='startx'
 alias i3conf='nano ~/.config/i3/config'
-
+alias la='ls -A' 
 # cd aliases
 alias cd.='cd ..'
 alias cd~='cd ~'
@@ -18,12 +18,19 @@ alias cdtmp='cd /tmp'
 alias cdtrns='cd ~/transmission'
 alias cdbkup='cd ~/recording-backup'
 alias cddot='cd ~/.dotfiles'
+
 ### exhdd aliases
 alias drives='sudo fdisk -l'
 alias mnta='sudo mount /dev/sda2 /media/exhdd'
 alias mntb='sudo mount /dev/sdb2 /media/exhdd'
 alias mntc='sudo mount /dev/sdc2 /media/exhdd'
 alias umnt='sudo umount /media/exhdd'
+
+### Transmission Aliases
+alias trns-start='sudo service transmission-daemon start'
+alias trns-stop='sudo service transmission-daemon stop'
+alias trnsl='transmission-remote -l'
+alias trns='transmission-remote'
 
 ### apt aliases
 alias updt='sudo apt update && sudo apt upgrade'
@@ -35,8 +42,7 @@ alias aremo='sudo apt autoremove'
 alias distup='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
 alias acln='sudo apt autoclean'
 ### Changelog
-# ver. 1.4:  "apt aliases"
-#              added acln alias
+# ver. 1.4:  Added Transmission-cli aliases
 #
 # ver. 1.3:  "general aliases"
 #              added cddot to cd aliases
