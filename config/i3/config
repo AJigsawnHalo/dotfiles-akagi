@@ -163,7 +163,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 # Gaps config
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 #smart_gaps on
 #gaps inner 5
 #gaps outer 5
