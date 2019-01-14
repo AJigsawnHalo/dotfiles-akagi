@@ -10,7 +10,7 @@ alias df='pydf'
 alias sx='startx'
 alias i3conf='nano ~/.config/i3/config'
 alias la='ls -A' 
-alias lss='ls -s'
+alias lss='ls -sh'
 
 # cd aliases
 alias cd.='cd ..'
@@ -23,10 +23,10 @@ alias cddot='cd ~/.dotfiles'
 
 ### exhdd aliases
 alias drives='sudo fdisk -l'
-alias mnta='sudo mount /dev/sda2 /media/exhdd'
-alias mntb='sudo mount /dev/sdb2 /media/exhdd'
-alias mntc='sudo mount /dev/sdc2 /media/exhdd'
-alias umnt='sudo umount /media/exhdd'
+alias mnta='sudo mount /dev/sda2 /media/exhdd && sudo mount /dev/sda1 /media/exhdd1'
+alias mntb='sudo mount /dev/sdb2 /media/exhdd && sudo mount /dev/sdb1 /media/exhdd1'
+alias mntc='sudo mount /dev/sdc2 /media/exhdd && sudo mount /dev/sdc1 /media/exhdd1'
+alias umnt='sudo umount /media/exhdd && sudo umount /media/exhdd1'
 
 ### Transmission Aliases
 alias transm-start='sudo service transmission-daemon start'
