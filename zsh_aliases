@@ -1,4 +1,4 @@
-##### User Aliases Akagi ver. 1.4.2  #####
+##### User Aliases Akagi ver. 1.4.3  #####
 
 # This is a set of aliases adapted for server akagi, my home media
 # server. These aliases are created to ease the management and maintenance
@@ -34,7 +34,7 @@ alias transm-stop='sudo service transmission-daemon stop'
 alias transm='transmission-remote'
 
 ### apt aliases
-alias updt='sudo apt update && sudo apt upgrade'
+alias upgd='sudo apt update && sudo apt upgrade'
 alias inst='sudo apt install'
 alias addrepo='sudo apt-add-repository'
 alias prge='sudo apt purge'
@@ -42,11 +42,17 @@ alias remo='sudo apt remove'
 alias aremo='sudo apt autoremove'
 alias distup='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
 alias acln='sudo apt autoclean'
+alias updt='sudo apt update'
 ### Changelog
-# ver. 1.4.2 general aliases
+# ver. 1.4.3 "apt aliases"
+#              changed updt to upgd and added a new updt alias
+#            "exhdd aliases"
+#              added mount point for an exhdd partition
+#
+# ver. 1.4.2 "general aliases"
 #              added lss alias
 #
-# ver. 1.4.1 transmission aliases
+# ver. 1.4.1 "transmission aliases"
 #              Changed syntax
 #              removed trnasmission list alias 
 #
