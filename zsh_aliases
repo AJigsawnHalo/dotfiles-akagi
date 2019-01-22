@@ -1,4 +1,4 @@
-##### User Aliases Akagi ver. 1.4.3  #####
+##### User Aliases Akagi ver. 1.4.4  #####
 
 # This is a set of aliases adapted for server akagi, my home media
 # server. These aliases are created to ease the management and maintenance
@@ -23,10 +23,10 @@ alias cddot='cd ~/.dotfiles'
 
 ### exhdd aliases
 alias drives='sudo fdisk -l'
-alias mnta='sudo mount /dev/sda2 /media/exhdd && sudo mount /dev/sda1 /media/exhdd1'
-alias mntb='sudo mount /dev/sdb2 /media/exhdd && sudo mount /dev/sdb1 /media/exhdd1'
-alias mntc='sudo mount /dev/sdc2 /media/exhdd && sudo mount /dev/sdc1 /media/exhdd1'
-alias umnt='sudo umount /media/exhdd && sudo umount /media/exhdd1'
+alias mnta='sudo mount /dev/sda2 ~/exhdd && sudo mount /dev/sda1 /media/exhdd1'
+alias mntb='sudo mount /dev/sdb2 ~/exhdd && sudo mount /dev/sdb1 /media/exhdd1'
+alias mntc='sudo mount /dev/sdc2 ~/exhdd && sudo mount /dev/sdc1 /media/exhdd1'
+alias umnt='sudo umount ~/exhdd && sudo umount /media/exhdd1'
 
 ### Transmission Aliases
 alias transm-start='sudo service transmission-daemon start'
@@ -44,6 +44,9 @@ alias distup='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
 alias acln='sudo apt autoclean'
 alias updt='sudo apt update'
 ### Changelog
+# ver. 1.4.4 "exhdd aliases"
+#              changed mount points for exhdd
+#
 # ver. 1.4.3 "apt aliases"
 #              changed updt to upgd and added a new updt alias
 #            "exhdd aliases"
