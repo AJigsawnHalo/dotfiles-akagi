@@ -42,7 +42,7 @@ alias remo='sudo apt remove'
 alias aremo='sudo apt autoremove'
 alias distup='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
 alias acln='sudo apt autoclean'
-alias updt='sudo apt update'
+alias updt='sudo apt update && apt list --upgradable'
 ### Changelog
 # ver. 1.4.4 "exhdd aliases"
 #              changed mount points for exhdd
