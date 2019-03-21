@@ -63,7 +63,7 @@ ZSH_THEME="eastwood"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git z tmux
+  git z tmux vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -99,3 +99,5 @@ source $ZSH/oh-my-zsh.sh
 source .zsh_aliases
 source .zsh_aliases_secret
 DEFAULT_USER="elskiee"
+export KEYTIMEOUT=1
+bindkey -v
