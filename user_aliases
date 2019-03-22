@@ -13,6 +13,7 @@ alias la='ls -A'
 alias lss='ls -sh'
 alias temp='/opt/vc/bin/vcgencmd measure_temp'
 alias omx='omxplayer'
+alias ncocc='sudo -u www-data php /var/www/html/nextcloud/occ'
 
 # cd aliases
 alias cd.='cd ..'
