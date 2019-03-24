@@ -14,6 +14,12 @@ alias lss='ls -sh'
 alias temp='/opt/vc/bin/vcgencmd measure_temp'
 alias omx='omxplayer'
 alias ncocc='sudo -u www-data php /var/www/html/nextcloud/occ'
+#alias glances='glances --disable-irq'
+
+# tmux aliases
+alias tmux="TERM=screen-256color-bce tmux"
+alias ta="TERM=screen-256color-bce tmux a"
+alias ts="TERM=screen-256color-bce tmux new"
 
 # cd aliases
 alias cd.='cd ..'
