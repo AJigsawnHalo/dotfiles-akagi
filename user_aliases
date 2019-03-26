@@ -55,3 +55,8 @@ alias distup='sudo apt update && apt list --upgradable && sudo apt upgrade && su
 alias acln='sudo apt autoclean'
 alias updt='sudo apt update && apt list --upgradable'
 
+### systemctl aliases
+alias sysctl-start="sudo systemctl start"
+alias sysctl-stop="sudo systemctl stop"
+alias sysctl-status="sudo systemctl status"
+alias sysctl="sudo systemctl"
