@@ -14,6 +14,8 @@ alias lss='ls -sh'
 alias temp='/opt/vc/bin/vcgencmd measure_temp'
 alias omx='omxplayer'
 alias ncocc='sudo -u www-data php /var/www/html/nextcloud/occ'
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
 #alias glances='glances --disable-irq'
 
 # tmux aliases
@@ -56,7 +58,14 @@ alias acln='sudo apt autoclean'
 alias updt='sudo apt update && apt list --upgradable'
 
 ### systemctl aliases
-alias sysctl-start="sudo systemctl start"
-alias sysctl-stop="sudo systemctl stop"
-alias sysctl-status="sudo systemctl status"
-alias sysctl="sudo systemctl"
+alias syctl-start="sudo systemctl start"
+alias syctl-stop="sudo systemctl stop"
+alias syctl-status="sudo systemctl status"
+alias syctl="sudo systemctl"
+alias akagi-services='sudo bash /etc/update-motd.d/30-systemd'
+
+### Pi-fan control
+alias fan-start='sudo systemctl start run-fan'
+alias fan-stop='sudo systemctl stop run-fan'
+alias fan-on='sudo systemctl stop run-fan && sudo systemctl start fan-on'
+alias fan-off='sudo systemctl stop fan-on && sudo systemctl start run-fan'
