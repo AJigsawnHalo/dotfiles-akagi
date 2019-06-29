@@ -1,0 +1,6 @@
+#!/bin/bash
+source /etc/update-motd.d/colors.txt
+
+#echo -e "Welcome to akagi-pi"
+echo -e 
+echo -e "${GRN}$(figlet -f 3d.flf akagi-pi)${NC}"

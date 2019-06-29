@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Source config files
+source /etc/update-motd.d/colors.txt
+
+echo 
+echo -e "${YEL}Disk Usage:${NC}"
+
+# Print out only the root, sda1, and sda2 lines. The double space at the start of the line is to make it look consistent with the other scripts
+
+#echo "$(df -h | grep -v -e tmp -e loop )" 
+echo "  $(df -h | grep -i Filesystem)"  
+echo "  $(df -h | grep -i root)"
+echo "  $(df -h | grep -i sda1)"
+echo "  $(df -h | grep -i sda2)"
+
+
+
+

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+source /etc/update-motd.d/colors.txt
+
+###### Show Date
+#echo -e "The date is $(date)"
+
+###### Script Title
+echo 
+echo -e "${YEL}Server status:${NC}"
+
+###### Show uname
+echo -e "  ${GRN}akagi-pi${NC} running ${GRN}$(uname -srm)"
+
+###### Show uptime
+echo -e "  ${NC}Server has been $(uptime -p)"
+
+###### Show CPU Temp
+declare -i num
+declare -i lim
+
+# Set Temp limit
+lim="60"
+
+# Get Temp
+TEMP="$(vcgencmd measure_temp | awk -F"temp=" '{print $2}')"
+num="$(echo $TEMP | cut -c1,2)"
+CPUTEMP=""
+
+# Set Temp Color based on lim
+if [ "$num" -ge "$lim" ] 
+then 
+        CPUTEMP+="${RED}${TEMP}${NC}"
+else
+        CPUTEMP+="${GRN}${TEMP}${NC}"
+fi
+
+echo -e "  ${NC}The CPU temp at login is $CPUTEMP"

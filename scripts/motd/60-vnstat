@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#source config files
+source /etc/update-motd.d/colors.txt
+
+vnstat -u # Update database
+
+# Print out the monthly data usage. The greps and sed pipes are for the output to look consistent with the other motd scripts.
+echo " "
+echo -e "${YEL}Data usage:${NC}"
+echo -e "$(vnstat -m | grep rx | sed 's/^....//')" #Print out the table header
+echo -e "$(vnstat -m | grep -m 1 + | sed 's/^....//' | sed -r "s/^(.{2})/  /"  )" #Print out the separating line
+echo -e "$(vnstat -m | grep "`date +"%b '%y"`" | sed 's/^....//')" #Print out the data usage

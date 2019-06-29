@@ -1,0 +1,4 @@
+#!/bin/bash
+
+TRANSUSER="elskiee" # Transmission Web Username
+TRANSPASS="844739_washitransmission" # Transmission Web Password
