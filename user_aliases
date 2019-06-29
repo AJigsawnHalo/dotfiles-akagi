@@ -34,7 +34,7 @@ alias cddot='cd ~/.dotfiles'
 
 ### exhdd aliases
 alias drives='sudo fdisk -l'
-alias mnta='sudo mount -t ntfs /dev/sda2 /media/elskiee/Storage_Portable && sudo mount -t /dev/sda1 /media/elskiee/Storage_32'
+alias mnta='sudo mount /dev/sda2 /home/elskiee/exhdd && sudo mount /dev/sda1 /media/elskiee/exhdd1'
 alias mntb='sudo mount /dev/sdb2 ~/exhdd && sudo mount /dev/sdb1 /media/exhdd1'
 alias mntc='sudo mount /dev/sdc2 ~/exhdd && sudo mount /dev/sdc1 /media/exhdd1'
 alias umnt='sudo umount /media/elskiee/Storage_Portable && sudo umount /media/elskiee/Storage_32'
@@ -65,7 +65,8 @@ alias syctl="sudo systemctl"
 alias akagi-services='sudo bash /etc/update-motd.d/30-systemd'
 
 ### Pi-fan control
-alias fan-start='sudo systemctl start run-fan'
-alias fan-stop='sudo systemctl stop run-fan'
-alias fan-on='sudo systemctl stop run-fan && sudo systemctl start fan-on'
-alias fan-off='sudo systemctl stop fan-on && sudo systemctl start run-fan'
+alias run-fan='sudo systemctl stop fan-off && sudo systemctl start run-fan'
+alias run-fan-stop='sudo systemctl stop run-fan'
+alias fan-on='sudo systemctl stop fan-off && sudo systemctl start fan-on'
+alias fan-off='sudo systemctl stop var-fan && sudo systemctl stop run-fan && sudo systemctl stop fan-on && sudo systemctl start fan-off'
+alias var-fan='sudo systemctl stop fan-off && sudo systemctl start var-fan'
