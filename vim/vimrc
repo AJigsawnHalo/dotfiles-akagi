@@ -1,4 +1,4 @@
-syntax enable 
+syntax on 
 
 " Colorschemes
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -19,12 +19,49 @@ set lazyredraw
 set showmatch
 set hlsearch
 set ic
+set laststatus=2
 
 " keybinds
 nnoremap <leader><space> :nohlsearch<CR> 
-
+map <C-o> :NERDTreeToggle<CR>
 " i3conf syntax detection
 aug i3config_ft_detection
   au!
-  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+  au BufNewFile,BufRead ~/.i3/config set filetype=i3config
 aug end
+
+" vimwiki required settings
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" instant-markdown settings
+set nocompatible
+set shell=bash\ -i
+map <leader>md :InstantMarkdownPreview<CR>
+"let g:instant_markdown_slow = 1
+"let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1 
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+"let g:instant_markdown_mathjax = 1
+
+" lightline.vim settings
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+call plug#begin('~/.vim/plugged')
+
+
+" lightline.vim
+Plug 'itchyny/lightline.vim'
+
+" Vimwiki
+Plug 'vimwiki/vimwiki'
+
+" Vim-instant-markdown
+Plug 'suan/vim-instant-markdown'
+
+call plug#end()
+
+set noshowmode 
+execute pathogen#infect()
+call pathogen#helptags()

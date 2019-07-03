@@ -101,5 +101,6 @@ source .zsh_aliases_secret
 DEFAULT_USER="elskiee"
 export KEYTIMEOUT=1
 bindkey -v
-PATH="$HOME/.scripts:$PATH"
+PATH="$HOME/.scripts:$HOME/.vimpkg/bin:$PATH"
 export PATH
+export WIKI="$HOME/Documents/wiki"
