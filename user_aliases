@@ -19,6 +19,13 @@ alias reboot='sudo reboot'
 alias wg='wordgrinder'
 #alias glances='glances --disable-irq'
 
+# git aliases
+alias gpsho='git push origin'
+alias gpllo='git pull origin'
+alias gcmmt='git commit'
+alias gpsh='git push'
+alias gpll='git pull'
+
 # tmux aliases
 #alias tmux="TERM=screen-256color-bce tmux"
 alias ta="TERM=screen-256color-bce tmux a"
