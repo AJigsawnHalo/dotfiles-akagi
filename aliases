@@ -55,7 +55,7 @@ alias transm-s-start='sudo systemctl start transmission-daemon'
 alias transm-s-stop='sudo systemctl stop transmission-daemon'
 
 ### apt aliases
-alias upgd='sudo apt update && apt list --upgradable && sudo apt upgrade'
+alias upgd='sudo apt update && sudo apt list --upgradable && sudo apt upgrade'
 alias inst='sudo apt install'
 alias addrepo='sudo apt-add-repository'
 alias prge='sudo apt purge'
