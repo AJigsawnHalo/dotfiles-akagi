@@ -53,7 +53,7 @@ alias transm-stop='transm -t all -S'
 #alias transm='transmission-remote'
 alias transm-s-start='sudo systemctl start transmission-daemon'
 alias transm-s-stop='sudo systemctl stop transmission-daemon'
-
+alias transm-dl='wget -P ~/exhdd/transmission/torrent-ingest/'
 ### apt aliases
 alias upgd='sudo apt update && sudo apt list --upgradable && sudo apt upgrade'
 alias inst='sudo apt install'
