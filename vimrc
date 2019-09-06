@@ -22,7 +22,7 @@ set showmatch
 set hlsearch
 set ic
 set laststatus=2
-set guioptions -=T
+"set guioptions -=T
 set splitright
 set splitbelow
 set nocompatible
