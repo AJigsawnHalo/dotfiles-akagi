@@ -28,16 +28,16 @@ alias gpll='git pull'
 
 # tmux aliases
 #alias tmux="TERM=screen-256color-bce tmux"
-alias ta="TERM=screen-256color-bce tmux a"
-alias ts="TERM=screen-256color-bce tmux new"
+#alias ta="TERM=screen-256color-bce tmux a"
+#alias ts="TERM=screen-256color-bce tmux new"
 
 # cd aliases
 alias cd.='cd ..'
 alias cd~='cd ~'
-alias cdx='cd /media/exhdd'
+alias cdx='cd ~/exhdd'
 alias cdtmp='cd /tmp'
-alias cdtrns='cd ~/transmission'
-alias cdbkup='cd ~/recording-backup'
+alias cdtrns='cd ~/Transmission'
+alias cdbkup='cd ~/Recordings'
 alias cddot='cd ~/.dotfiles'
 
 ### exhdd aliases
@@ -54,6 +54,7 @@ alias transm-stop='transm -t all -S'
 alias transm-s-start='sudo systemctl start transmission-daemon'
 alias transm-s-stop='sudo systemctl stop transmission-daemon'
 alias transm-dl='wget -P ~/exhdd/transmission/torrent-ingest/'
+
 ### apt aliases
 alias upgd='sudo apt update && sudo apt list --upgradable && sudo apt upgrade'
 alias inst='sudo apt install'
