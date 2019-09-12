@@ -1,3 +1,4 @@
+
 ##### User Aliases Akagi ver. 2.0.0  #####
 
 # This is a set of aliases adapted for server akagi, my home media
@@ -14,11 +15,13 @@ alias lss='ls -sh'
 alias temp='/opt/vc/bin/vcgencmd measure_temp'
 alias omx='omxplayer'
 alias ncocc='sudo -u www-data php /var/www/html/nextcloud/occ'
-alias poweroff='sudo poweroff'
-alias reboot='sudo reboot'
+#alias poweroff='sudo poweroff'
+#alias reboot='sudo reboot'
 alias wg='wordgrinder'
-#alias glances='glances --disable-irq'
-
+alias smc='emacsclient -c -nw'
+alias remacs='killall emacs && bash ~/.progress.sh'
+alias vimwiki='vim ~/wiki/index.md'
+alias notes='vim ~/wiki/notes' 
 # git aliases
 alias gpsho='git push origin'
 alias gpllo='git pull origin'
@@ -55,15 +58,15 @@ alias transm-s-start='sudo systemctl start transmission-daemon'
 alias transm-s-stop='sudo systemctl stop transmission-daemon'
 
 ### apt aliases
-alias upgd='sudo apt update && sudo apt list --upgradable && sudo apt upgrade'
-alias inst='sudo apt install'
-alias addrepo='sudo apt-add-repository'
-alias prge='sudo apt purge'
-alias remo='sudo apt remove'
-alias aremo='sudo apt autoremove'
+alias upgd=' apt update && apt list --upgradable && apt upgrade'
+alias inst=' apt install'
+alias addrepo=' apt-add-repository'
+alias prge=' apt purge'
+alias remo=' apt remove'
+alias aremo=' apt autoremove'
 alias distup='sudo apt update && apt list --upgradable && sudo apt upgrade && sudo apt dist-upgrade'
-alias acln='sudo apt autoclean'
-alias updt='sudo apt update && apt list --upgradable'
+alias acln=' apt autoclean'
+alias updt=' apt update && apt list --upgradable'
 
 ### systemctl aliases
 alias syctl-start="sudo systemctl start"

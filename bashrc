@@ -1,5 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# ~/.bashrc: executed by bash(1) for non-login shells. # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
 # If not running interactively, don't do anything
@@ -116,5 +115,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-VISUAL=nano ; export VISUAL
-EDITOR=nano ; export EDITOR
+
+export PATH="/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:/data/data/com.termux/files/home/.local/bin"
+#echo -ne "Starting Spacemacs daemon"
+#while true;do echo -n .;sleep 1;done &
+#emacs --insecure --daemon > /dev/null 2>&1 # or do something else here
+#kill $!; trap 'kill $!' SIGTERM
+#echo Done
+#bash $HOME/.progress.sh 
+sleep 2
+echo "Hello Elskiee."
