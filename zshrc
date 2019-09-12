@@ -96,8 +96,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source .zsh_aliases
-source .zsh_aliases_secret
+source ~/.zsh_aliases
+source ~/.zsh_aliases_secret
 DEFAULT_USER="elskiee"
 export KEYTIMEOUT=1
 bindkey -v
