@@ -27,6 +27,10 @@ set splitright
 set splitbelow
 set nocompatible
 set viminfo='100,<50,s10,h,%
+set ttimeout
+set ttimeoutlen=100
+set timeoutlen=3000
+
 if has('gui_running')
 	set guifont=Source\ Code\ Pro\ 10
 endif
