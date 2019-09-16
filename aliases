@@ -28,8 +28,8 @@ alias gpll='git pull'
 
 # tmux aliases
 #alias tmux="TERM=screen-256color-bce tmux"
-#alias ta="TERM=screen-256color-bce tmux a"
-#alias ts="TERM=screen-256color-bce tmux new"
+alias ta="tmux a"
+alias ts="tmux new -s"
 
 # cd aliases
 alias cd.='cd ..'
