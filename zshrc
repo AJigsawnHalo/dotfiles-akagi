@@ -140,7 +140,7 @@ SPACESHIP_DIR_PREFIX=""
 
 # source aliases
 source ~/.aliases
-#source ~/.zsh_aliases_secret
+source ~/.zsh_aliases_secret
 
 # Other options
 DEFAULT_USER="elskiee"
