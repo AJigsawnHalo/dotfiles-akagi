@@ -28,7 +28,7 @@ echo "The OS is $OS $VER"
 # Update and install needed packages
 echo "Checking for required packages"
 # For Debian-based distros
-if [ $OS == "Pop!_OS" ] || [ $OS == "Ubuntu" ] || [ $OS == "Debian" ]; then
+if [$OS == "Raspbian" ] || [ $OS == "Pop!_OS" ] || [ $OS == "Ubuntu" ] || [ $OS == "Debian" ]; then
 	sudo apt update && sudo apt install curl git tmux zsh vim wget
 # For Arch-based distros
 elif [ $OS == "Arch Linux" ] || [ $OS == "Manjaro" ]; then
