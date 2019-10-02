@@ -38,7 +38,7 @@ fi
 # Clone the dotfiles git if it's not found
 if [ ! -f $HOME/.dotfiles ]; then
 	echo "Dotfiles directory not found. Cloning git repo."
-	git clone https://github.com/AJigsawnHalo/dotfiles.git .dotfiles
+	git clone https://github.com/AJigsawnHalo/dotfiles-akagi.git .dotfiles
 fi
 
 # Download plugins and themes for vim and zsh
