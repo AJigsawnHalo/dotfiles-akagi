@@ -31,7 +31,7 @@ echo "Checking for required packages"
 if ["$OS" == "Raspbian GNU/Linux" ] || [ "$OS" == "Pop!_OS" ] || [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
 	sudo apt update && sudo apt install curl git tmux zsh vim wget
 # For Arch-based distros
-elif [ "$OS" == "Arch Linux" ] || [ "$OS" == "Manjaro" ]; then
+elif [ "$OS" == "Arch Linux" ] || [ "$OS" == "Manjaro Linux" ]; then
 	sudo pacman -Sy curl git tmux zsh vim wget
 fi
 
