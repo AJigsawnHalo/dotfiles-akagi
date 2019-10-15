@@ -22,7 +22,6 @@ set showmatch
 set hlsearch
 set ic
 set laststatus=2
-"set guioptions -=T
 set splitright
 set splitbelow
 set nocompatible
@@ -32,6 +31,7 @@ set ttimeoutlen=100
 set timeoutlen=3000
 
 if has('gui_running')
+	set guioptions -=T
 	set guifont=Source\ Code\ Pro\ 10
 endif
 
@@ -61,7 +61,7 @@ let g:vimwiki_list = [wiki_notes,wiki_writing]
 "let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'default', 'ext': '.wiki'}]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_folding='expr'
-set foldlevelstart=2
+set foldlevelstart=5
 
 let g:org_todo_keywords=['TODO', 'PROGRESS', 'BLOCKED', 'REVIEW', '|', 'DONE', 'ARCHIVED', 'CANCELLED']
 let g:org_agenda_files=['~/Wiki/*.org']
@@ -94,6 +94,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'cocopon/lightline-hybrid.vim'
 
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
 " Vimwiki
 Plug 'vimwiki/vimwiki'
 
@@ -114,7 +117,8 @@ Plug 'jlanzarotta/bufexplorer'
 " Vim-orgmode and dependencies
 Plug 'jceb/vim-orgmode'
 Plug 'https://github.com/tpope/vim-speeddating'
-Plug 'git://github.com/mattn/calendar-vim'
+Plug 'git://github.com/itchyny/calendar.vim'
+"Plug 'git://github.com/mattn/calendar-vim'
 Plug 'https://github.com/inkarkat/vim-SyntaxRange'
 Plug 'vim-scripts/utl.vim'
 
