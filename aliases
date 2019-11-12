@@ -19,6 +19,8 @@ alias reboot='sudo reboot'
 alias wg='wordgrinder'
 #alias glances='glances --disable-irq'
 alias yt-dl='youtube-dl'
+alias watch-list='vim ~/Transmission/watch-list.txt'
+alias transm-log='vim ~/.config/nyaa-dl/nyaa-dl.log'
 
 # git aliases
 alias gpsho='git push origin'
