@@ -8,6 +8,7 @@ import configparser
 import os
 import shutil
 import datetime
+import sys
 
 feed = feedparser.parse('https://nyaa.si/?page=rss')
 number_dl = 0
@@ -63,14 +64,14 @@ def exit_message():
         log = open(log_path, 'a')
         log.write(message + '\n')
         log.close()
-        exit()
+        sys.exit()
     else:
         message = "All anime up to date."
         print(message)
         log = open(log_path, 'a')
         log.write(message + '\n')
         log.close()
-        exit()
+        sys.exit()
 
 def dl_torrent(feed):
     log_path = os.environ["HOME"] + "/.config/nyaa-dl/nyaa-dl.log"
