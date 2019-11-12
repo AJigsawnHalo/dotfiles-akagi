@@ -18,6 +18,7 @@ alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
 alias wg='wordgrinder'
 #alias glances='glances --disable-irq'
+alias yt-dl='youtube-dl'
 
 # git aliases
 alias gpsho='git push origin'
