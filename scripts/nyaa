@@ -83,7 +83,7 @@ def dl_torrent(feed):
     for post in feed.entries:
         animes = read_watch_list()
         for anime in animes:
-            if anime in post.title:
+            if (anime != "") and (anime in post.title):
                 if ("1080p" in post.title):
                     dlpath = read_dl_path()
                     inpath = read_in_path()
