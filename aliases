@@ -35,8 +35,6 @@ alias ta="tmux a"
 alias ts="tmux new -s"
 
 # cd aliases
-alias cd.='cd ..'
-alias cd~='cd ~'
 alias cdx='cd ~/exhdd'
 alias cdtmp='cd /tmp'
 alias cdtrns='cd ~/Transmission'
