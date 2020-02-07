@@ -21,6 +21,8 @@ alias wg='wordgrinder'
 alias yt-dl='youtube-dl'
 alias watch-list='vim ~/Transmission/watch-list.txt'
 alias transm-log='vim ~/.config/nyaa-dl/nyaa-dl.log'
+alias nyaadle-l='vim ~/.config/nyaadle/nyaadle.log'
+alias nyaadle-s='vim ~/.config/nyaadle/Settings.toml'
 
 # git aliases
 alias gpsho='git push origin'
