@@ -130,6 +130,8 @@ Plug 'rainglow/vim'
 
 " Vimtex - LaTeX Plugin
 Plug 'lervag/vimtex'
+
+Plug 'cespare/vim-toml'
 call plug#end()
 
 set noshowmode 
