@@ -40,12 +40,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 map <C-o> :NERDTreeToggle<CR>
 nnoremap <leader>t :bel terminal<CR>
 
-" i3conf syntax detection
-
-aug i3config_ft_detection
-  au!
-  au BufNewFile,BufRead ~/.config/regolith/i3/config set filetype=i3config
-aug end
 
 " vimwiki settings
 let wiki_notes = {} 
