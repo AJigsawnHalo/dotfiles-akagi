@@ -28,11 +28,11 @@ echo "The OS is $OS $VER"
 # Update and install needed packages
 echo "Checking for required packages"
 # For Debian-based distros
-if ["$OS" == "Raspbian GNU/Linux" ] || [ "$OS" == "Pop!_OS" ] || [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
-	sudo apt update && sudo apt install curl git tmux zsh vim wget
+if [ "$OS" == "Raspbian GNU/Linux" ] || [ "$OS" == "Pop!_OS" ] || [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
+	sudo apt update && sudo apt install curl git tmux zsh neovim wget
 # For Arch-based distros
 elif [ "$OS" == "Arch Linux" ] || [ "$OS" == "Manjaro Linux" ]; then
-	sudo pacman -Sy curl git tmux zsh vim wget
+	sudo pacman -Sy curl git tmux zsh neovim wget
 fi
 
 # Clone the dotfiles git if it's not found
@@ -77,4 +77,26 @@ elif [ "$ARG" == "" ]; then
 	done
 	ln -sfv $HOME/.dotfiles/colors $HOME/.vim/colors
 fi
+
+# Create package management symlink for the appropriate distro
+# For Debian-based distros
+if [ "$OS" == "Pop!_OS" ] || [ "$OS" == "Raspbian GNU/Linux" ] || [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
+	ln -sfv $HOME/.dotfiles/aptAliases ~/.packman_aliases
+# For Arch-based distros
+elif [ "$OS" == "Arch Linux" ] || [ "$OS" == "Manjaro Linux" ]; then
+	ln -sfv $HOME/.dotfiles/pacmanAliases ~/.packman_aliases
+fi
+
+# Use vimrc for neovim
+mkdir ~/.config/nvim
+echo -e "set runtimepath^=~/.vim runtimepath+=~/.vim/after\n\
+	let &packpath = &runtimepath\n\
+	source ~/.vimrc" >> ~/.config/nvim/init.vim
+# Install vim-plug plugins
+	vim -c 'PlugInstall|q'
+#	vim -c 'CocInstall -sync coc-sh coc-marketplace \
+#		coc-rls coc-powershell coc-godot \
+#		coc-clangd coc-vimlsp coc-tsserver \
+#		coc-python coc-git coc-cord|q'
+echo -e "\nInstall Complete."
 

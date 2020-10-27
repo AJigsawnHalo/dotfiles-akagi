@@ -140,6 +140,7 @@ SPACESHIP_DIR_PREFIX=""
 
 # source aliases
 source ~/.aliases
+source ~/.packman_aliases
 source ~/.zsh_aliases_secret
 
 # Other options
