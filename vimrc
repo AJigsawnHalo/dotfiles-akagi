@@ -125,6 +125,9 @@ Plug 'rainglow/vim'
 " Vimtex - LaTeX Plugin
 Plug 'lervag/vimtex'
 
+" coc.nvim
+Plug 'neoclide/coc.nvim'
+
 Plug 'cespare/vim-toml'
 call plug#end()
 
