@@ -24,6 +24,7 @@ alias transm-log='vim ~/.config/nyaa-dl/nyaa-dl.log'
 alias nya-l='vim ~/.config/nyaadle/nyaadle.log'
 alias nya-s='nyaadle tui -s'
 alias nya-w='nyaadle tui -w'
+alias nya-dl='nyaadle dl -l'
 
 # git aliases
 alias gpsho='git push origin'
