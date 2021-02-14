@@ -3,7 +3,7 @@
 #source config files
 source /etc/update-motd.d/colors.txt
 
-vnstat -u # Update database
+#vnstat -u # Update database
 
 # Print out the monthly data usage. The greps and sed pipes are for the output to look consistent with the other motd scripts.
 echo " "

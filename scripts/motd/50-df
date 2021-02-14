@@ -13,6 +13,7 @@ echo "  $(df -h | grep -i Filesystem)"
 echo "  $(df -h | grep -i root)"
 echo "  $(df -h | grep -i sda1)"
 echo "  $(df -h | grep -i sda2)"
+echo "  $(df -h | grep -i sdb2)"
 
 
 
