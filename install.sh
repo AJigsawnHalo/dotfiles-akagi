@@ -106,8 +106,8 @@ echo -e "set runtimepath^=~/.vim runtimepath+=~/.vim/after\n\
 	let &packpath = &runtimepath\n\
 	source ~/.vimrc" >> ~/.config/nvim/init.vim
 # Install vim-plug plugins
-	vim -c 'PlugInstall|q'
-	vim -c 'CocInstall -sync coc-sh coc-marketplace \
+	nvim -c 'PlugInstall|q'
+	nvim -c 'CocInstall -sync coc-sh coc-marketplace \
 		coc-rls coc-powershell coc-godot \
 		coc-clangd coc-vimlsp coc-tsserver \
 		coc-python coc-git coc-cord|q'

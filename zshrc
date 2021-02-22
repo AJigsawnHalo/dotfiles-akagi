@@ -154,5 +154,5 @@ PATH="$HOME/.scripts:$HOME/.vimpkg/bin:$HOME/.local/bin:$PATH"
 export PATH
 export WIKI="$HOME/Documents/wiki"
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
