@@ -32,7 +32,14 @@ if [ "$OS" == "Raspbian GNU/Linux" ] || [ "$OS" == "Pop!_OS" ] || [ "$OS" == "Ub
 	sudo apt update && sudo apt install curl git tmux zsh neovim wget
 # For Arch-based distros
 elif [ "$OS" == "Arch Linux" ] || [ "$OS" == "Manjaro Linux" ]; then
-	sudo pacman -Sy curl git tmux zsh neovim wget
+	sudo pacman -Sy curl git tmux zsh neovim wget base-devel nodejs npm transmission-cli
+	mkdir -p ~/Other/src
+	cd ~/Other/src
+	### Pull yay git
+	git clone https://aur.archlinux.org/yay.git yay
+	cd yay
+	makepkg -si	
+	cd ~
 fi
 
 # Clone the dotfiles git if it's not found
@@ -58,6 +65,12 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 echo "Installing Vim-plug plugin manager"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Create symlinks
 echo "Creating symlinks"
@@ -94,9 +107,9 @@ echo -e "set runtimepath^=~/.vim runtimepath+=~/.vim/after\n\
 	source ~/.vimrc" >> ~/.config/nvim/init.vim
 # Install vim-plug plugins
 	vim -c 'PlugInstall|q'
-#	vim -c 'CocInstall -sync coc-sh coc-marketplace \
-#		coc-rls coc-powershell coc-godot \
-#		coc-clangd coc-vimlsp coc-tsserver \
-#		coc-python coc-git coc-cord|q'
+	vim -c 'CocInstall -sync coc-sh coc-marketplace \
+		coc-rls coc-powershell coc-godot \
+		coc-clangd coc-vimlsp coc-tsserver \
+		coc-python coc-git coc-cord|q'
 echo -e "\nInstall Complete."
 
