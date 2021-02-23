@@ -35,10 +35,50 @@ if has('gui_running')
 	set guifont=Source\ Code\ Pro\ 10
 endif
 
-" keybinds
+" Custom Keybinds
 nnoremap <leader><space> :nohlsearch<CR> 
-map <C-o> :NERDTreeToggle<CR>
-nnoremap <leader>t :bel terminal<CR>
+map <C-o> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+nnoremap <leader>t :sp <Bar> terminal<CR>
+nnoremap <leader>vt :vert terminal<CR>
+nnoremap <leader>nt :tabnew<CR>
+nnoremap <leader>ycm :YcmGenerateConfig<CR>
+"" Rust keybinds
+nnoremap <leader>cr :!cargo run<CR>
+nnoremap <leader>cb :!cargo build<CR>
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gv :vsp<CR><Plug>(coc-definition)
+nmap <silent> <leader>gs :sp<CR><Plug>(coc-definition)
+
+" Autocommands
+" autocmd terminal
+augroup terminal_settings
+    autocmd!
+	autocmd TermOpen term://* startinsert
+    autocmd BufLeave term://* stopinsert
+
+    " Ignore various filetypes as those will close terminal automatically
+    " Ignore fzf, ranger, coc
+    autocmd TermClose term://*
+          \ if (expand('<afile>') !~ "fzf") && (expand('<afile>') !~ "ranger") && (expand('<afile>') !~ "coc") |
+          \   call nvim_input('<CR>')  |
+          \ endif
+  augroup END 
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"" autocmd NERDTREE
+""" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | wincmd p | endif
+""" Start NERDTree when Vim starts with a directory argument.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+""" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+""" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * silent NERDTreeMirror
+
+
 
 
 " vimwiki settings
