@@ -101,7 +101,7 @@ elif [ "$OS" == "Arch Linux" ] || [ "$OS" == "Manjaro Linux" ]; then
 fi
 
 # Use vimrc for neovim
-mkdir ~/.config/nvim
+mkdir -p ~/.config/nvim
 echo -e "set runtimepath^=~/.vim runtimepath+=~/.vim/after\n\
 	let &packpath = &runtimepath\n\
 	source ~/.vimrc" >> ~/.config/nvim/init.vim
