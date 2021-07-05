@@ -22,11 +22,11 @@ alias wg='wordgrinder'
 alias yt-dl='youtube-dl'
 alias watch-list='nvim ~/Transmission/watch-list.txt'
 alias transm-log='nvim ~/.config/nyaa-dl/nyaa-dl.log'
-alias nya-l='nvim ~/.config/nyaadle/nyaadle.log'
+alias nya-l='bat ~/.config/nyaadle/nyaadle.log'
 alias nya-s='nyaadle tui -s'
 alias nya-w='nyaadle tui -w'
 alias nya-dl='nyaadle dl -l'
-alias bat='batcat'
+#alias bat='batcat'
 
 # git aliases
 alias gpsho='git push origin'

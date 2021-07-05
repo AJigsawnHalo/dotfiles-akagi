@@ -14,3 +14,4 @@ alias orph='sudo pacman -Rns $(pacman -Qtdq)'
 alias mirror-update='sudo pacman-mirrors -c Australia,Bangladesh,Hong_Kong,India,Indonesia,Japan,Philippines,Singapore,South_Korea,Taiwan,United_States'
 
 
+alias cronedit='su -c "crontab -e"'
