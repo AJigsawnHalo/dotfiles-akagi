@@ -87,7 +87,7 @@ let wiki_notes.path = '~/Wiki/'
 let wiki_notes.syntax = 'markdown'
 let wiki_notes.ext = '.md'
 let wiki_writing = {}
-let wiki_writing.path = '~/Projects/writing/'
+let wiki_writing.path = '~/Writing/'
 let wiki_writing.syntax = 'markdown'
 let wiki_writing.ext = '.md'
 
