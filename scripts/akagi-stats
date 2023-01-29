@@ -2,6 +2,7 @@
 
 sudo bash /etc/update-motd.d/10-uname
 sudo bash /etc/update-motd.d/20-server-status
+sudo bash /etc/update-motd.d/25-landscape-sysinfo
 sudo bash /etc/update-motd.d/30-systemd
 sudo bash /etc/update-motd.d/40-transmission
 sudo bash /etc/update-motd.d/50-df
