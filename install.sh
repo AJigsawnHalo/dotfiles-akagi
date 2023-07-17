@@ -29,7 +29,7 @@ echo "The OS is $OS $VER"
 echo "Checking for required packages"
 # For Debian-based distros
 if [ "$OS" == "Raspbian GNU/Linux" ] || [ "$OS" == "Pop!_OS" ] || [ "$OS" == "Ubuntu" ] || [ "$OS" == "Debian" ]; then
-	sudo apt update && sudo apt install curl git tmux zsh neovim wget nodejs npm build-essential transmission-cli transmission-daemon
+	sudo apt update && sudo apt install curl git tmux zsh neovim wget nodejs npm build-essential transmission-cli transmission-daemon nala
 # For Arch-based distros
 elif [ "$OS" == "Arch Linux" ] || [ "$OS" == "Manjaro Linux" ]; then
 	sudo pacman -Sy curl git tmux zsh neovim wget base-devel nodejs npm transmission-cli
