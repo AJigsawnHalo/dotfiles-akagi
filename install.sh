@@ -2,9 +2,9 @@
 
 # Initialize variables
 ARG=$1
-essential=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "scripts")
-i3=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "i3" "config" "i3status.conf" "scripts")
-all=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "i3" "config" "i3status.conf" "Xresources" "scripts")
+essential=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "host-tmux.conf" "scripts")
+i3=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "host-tmux.conf" "i3" "config" "i3status.conf" "scripts")
+all=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "host-tmux.conf" "i3" "config" "i3status.conf" "Xresources" "scripts")
 
 
 # Check for OS and version
