@@ -2,9 +2,9 @@
 
 # Initialize variables
 ARG=$1
-essential=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "host-tmux.conf" "scripts")
-i3=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "host-tmux.conf" "i3" "config" "i3status.conf" "scripts")
-all=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "host-tmux.conf" "i3" "config" "i3status.conf" "Xresources" "scripts")
+essential=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "scripts")
+i3=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "i3" "config" "i3status.conf" "scripts")
+all=("bashrc" "aliases" "zshrc" "vimrc" "tmux.conf" "i3" "config" "i3status.conf" "Xresources" "scripts")
 
 
 # Check for OS and version
@@ -77,16 +77,19 @@ echo "Creating symlinks"
 if [ "$ARG" == "i3" ]; then
 	for file in ${i3[@]}; do
 		ln -sfv $HOME/.dotfiles/$file $HOME/.$file	
+		cp -v $HOME/.dotfiles/host-tmux.conf $HOME/.host-tmux.conf
 	done
 	ln -sfv $HOME/.dotfiles/colors $HOME/.vim/colors
 elif [ "$ARG" == "include-all" ]; then
 	for file in ${all[@]}; do
 		ln -sfv $HOME/.dotfiles/$file $HOME/.$file	
+		cp -v $HOME/.dotfiles/host-tmux.conf $HOME/.host-tmux.conf
 	done
 	ln -sfv $HOME/.dotfiles/colors $HOME/.vim/colors
 elif [ "$ARG" == "" ]; then 
 	for file in ${essential[@]}; do
 		ln -sfv $HOME/.dotfiles/$file $HOME/.$file	
+		cp -v $HOME/.dotfiles/host-tmux.conf $HOME/.host-tmux.conf
 	done
 	ln -sfv $HOME/.dotfiles/colors $HOME/.vim/colors
 fi
