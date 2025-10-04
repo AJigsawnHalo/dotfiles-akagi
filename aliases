@@ -26,6 +26,7 @@ alias nya-l='bat ~/.config/nyaadle/nyaadle.log'
 alias nya-s='nyaadle tui -s'
 alias nya-w='nyaadle tui -w'
 alias nya-dl='nyaadle dl -l'
+alias nya-add='nyaadle wle -a -o 1080 -t'
 #alias bat='batcat'
 
 # git aliases
